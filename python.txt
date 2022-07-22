@@ -1,0 +1,732 @@
+TUDO O QUE APRENDEMOS:
+
+-Variáveis
+-Tipos de variáveis
+-Comentários
+-Strings
+-Strings formatadas
+-Strings (métodos)
+-Operadores aritméticos
+-Precedência dos operadores
+-Módulo math
+-Função print() e input()
+-Estrutura condicional: if
+-Operadores lógicos
+-Operadores de comparação
+-Ciclo de repetição: while
+-Módulo random
+-Listas
+-Ciclo de repetição: for
+-Listas bidimensionais
+-Listas (métodos)
+-Tuplas
+-Dicionários
+-Funções
+-Funções (argumentos e parâmetros)
+-Funções (return)
+-Excepções
+-Criar um módulo
+-Classes e objetos
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+idade = 10 		#int -> numero inteiro
+Altura = 1.54 		#float -> numero decimal
+nome = "Beatriz" 	#string -> string (texto)
+casado = false 		#boolean (bool)-> boolean (so diz verdadeiro ou falso) 
+--> ex: email = "cunhanik@gmail.com" 
+contem = "cunha" in email
+print(contem)
+\n	#Muda de linha
+:.1f	#Arrendonda o valor na primeira casa decimal
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+significado dos is:
+isupper() --> tem só letras minusculas?
+istitle() --> está estabilizada?
+isnumeric() --> é numerica?
+isalnum() --> é alfa númerico? se tem números e letras juntos
+islower() --> tem letras minusculas?
+isspace() --> se tem espaços
+use sempre () se não seu programa irá dar erro!
+
+Dissecar uma Variável
+algo = input("Digite algo: ")
+algo.isalnum
+print("é um alfa? ", algo.isalpha())
+print("é um numero decimal?", algo.isdecimal())
+print ("é tudo minisculo?", algo.islower())
+print ("é numerico?", algo.isnumeric())
+print ("é tudo maiusculo?", algo.isupper())
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5+2==7		#adição
+5-2==3		#subtração
+5*2==10		#multiplicação
+5/2==2.5	#divisão
+5**2==25	#potência
+    ou
+pow(5,2)	#potência
+5//2==2		#divisão inteira
+5%2==1		#resto da divisão
+5**(1/2)	#raíz quadrada
+5//(1/3)	#raíz cubica
+5<2		#menor
+5>2		#maior
+==		#igualdade
+
+Para fazer o 5//2 e o 5%2 fazemos:
+
+5|_2_		5/2 tem que ser 2, porque se passa do 2, já dá mais que 5. 2x2 é = 4, ou seja, resta 1.
+1| 2		Ou seja: A divisão inteira é 2, o resto da divisão é 1.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ordem de precedência:
+
+1º ()
+2º **
+3º * / // % Se tivermos tudo na mesma expressão, fazemos o que vem primeiro.
+4º + -
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+modulo math
+
+ceil -> faz arrendondamento para cima
+floor -> faz arrendondamento para baixo
+trun -> elimina da virgula para a frente (truncate)
+pow -> potencia
+sqrt -> raíz quadrada
+factorial -> calculo factorial
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Funções:
+
+len
+ex:
+nome = "Beatriz Agulheiro"
+print (len(nome)) -> isto indica o numero de caracteres que a minha string "nome" tem.
+neste caso tem 17 caracteres, atenção que o espaço que há entre os nomes CONTA!!!
+
+count
+ex:
+nome = "Beatriz Agulheiro"
+print nome.count("o") -> isto indica quantas vezes aparece a letra "o"
+ex:
+frase.count("o",0,7) -> isto vai ver se existe a letra "o" da posição [0] até à posição [7]
+nota: A palavra "Beatriz" tem 6 caracteres, para que apanhe todos temos que fazer 0,7
+o caracter 7 nunca é incluído.
+
+find
+ex:
+nome = "Beatriz Agulheiro"
+print frase.find("iro") -> isto indica em que posição encontramos o "iro" no nosso nome. ou seja, vai indicar-nos: 14. Ou seja, "iro" começa na posição 14.
+
+in
+ex:
+nome = "Beatriz Agulheiro"
+"bea" in nome -> existe a palavra "bea" no nosso nome? Vai aparecer True
+
+replace
+ex:
+nome = "Beatriz Agulheiro"
+print nome.replace("Beatriz","Cunha") -> Isto vai substituir "Beatriz" por "Cunha"
+nota: Replace
+
+upper
+ex:
+nome = "Beatriz Agulheiro"
+print nome.upper() -> Transforma tudo em maiusculo
+
+lower
+ex:
+nome = "Beatriz Agulheiro"
+print nome.lower() -> Transforma tudo em minusculo
+
+capitalize()
+ex:
+nome = "Beatriz Agulheiro"
+print nome.capitalize() -> Vai pôr todos os caracteres em minusculo, menos a posição [0]
+
+title()
+ex:
+nome = "Beatriz Agulheiro"
+print nome.title() -> Vai analisar quantas palavras tem a nossa string (pela posição dos espaços, consegue fazer isso) e pôe os caracteres depois do espaço, ou seja, o inicio de cada palavra em letra maiuscula. ou seja "Beatriz Agulheiro"
+
+strip()
+ex:
+nome = "Beatriz Agulheiro"
+print nome.strip() -> Remove todos os espaços inuteis da string.
+nome = "    Beatriz Agulheiro    " , reparem que existe espaço entre as aspas e o nome. O que o strip faz é que automaticamente remove aqueles espaços e fica: nome = "Beatriz Agulheiro"
+
+rstrip()
+ex:
+nome = "Beatriz Agulheiro"
+print nome.rstrip() -> Remove todos os espaços inuteis do lado direito. R-> right
+nome = "    Beatriz Agulheiro    " , reparem que existe espaço entre as aspas e o nome. O que o rstrip faz é que automaticamente remove os espaços à direita e fica: nome = "   Beatriz Agulheiro"
+
+lstrip()
+ex:
+nome = "Beatriz Agulheiro"
+print nome.lstrip() -> Remove todos os espaços inuteis do lado esquerdo. L-> right
+nome = "    Beatriz Agulheiro    " , reparem que existe espaço entre as aspas e o nome. O que o rstrip faz é que automaticamente remove os espaços à esquerda e fica: nome = "Beatriz Agulheiro   "
+
+split()
+ex:
+nome = "Beatriz Agulheiro"
+print nome.split() -> Divide a string em listas. Ou seja, nome= "Beatriz" "Agulheiro"
+
+join
+ex:
+nome = "Beatriz" "Agulheiro"
+print "-".join(nome) -> ao contrario do split que divide a nossa string, o join, junta! Nós neste exemplo temos a nossa string splitada "Beatriz" "Agulheiro"; ao fazer "-".join(nome) ficamos com a string novamente junta mas ao invés do espaço entre os nomes fica "Beatriz-Agulheiro"
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+idade = input("Qual é a tua idade?")
+if (exemplo:) if int(idade) < 18
+                   print("Ainda não tens idade para tirar a carta")
+elif (exemplo:) elif int(idade) > 65
+                  print ("Já nao tem idade para tirar a carta")
+else (exemplo:) else
+                    print("Podes tirar a carta")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+and
+or
+not
+
+Aqui trabalhamos com bool (True or False)
+
+Para trabalhar com " and ", a nossa condiçao tem que ser positiva, a unica maneira de passarmos para um else, é preciso que haja alguma coisa False.
+ex: ter_dinheiro = True
+    banco_empresta = True
+    if ter_dinheiro and banco_empresta
+        print("Pode comprar casa")
+    else:
+        print("Esperar mais um tempo")
+Para trabalhar com " or ", a nossa condiçao pode ser Verdadeira e falsa, tem que ter no minimo uma True, a unica maneira de passarmos para um else, é preciso que ambas sejam falsas.
+ex: ter_dinheiro = False
+    banco_empresta = True
+    if ter_dinheiro and banco_empresta
+        print("Pode comprar casa")
+    else:
+        print("Esperar mais um tempo")
+Para trabalhar com " not ", escreve se or not, as nossas condições podem ser ambas falsas, a unica maneira de passarmos para um else, é preciso que ambas sejam verdadeiras. o not, inverte o valor das variaveis, if ter dinheiro = False, com o not, passa para True!
+ex: ter_dinheiro = False                                             
+    banco_empresta = False	                                     o que aconteceu aqui foi que o "or not" passou o
+    if ter_dinheiro or not banco_empresta                            "banco_empresta" para True. Ou seja, pode comprar casa.
+        print("Pode comprar casa")                                   
+    else:
+        print("Esperar mais um tempo")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+while condição:                 n=1                                        o que isto faz?
+    instrução1                  whyle n <=5:                               Então é assim, o nosso n=1,
+    instrução2                        print(n)                             com a condição whyle diz-nos que quando o valor
+    instrução3                        n+= 1                                n é menor ou igual a 5, vai imprimir o valor do
+    break                       print("fim do programa")                   n(1). Isto vai entrar num ciclo infinito, pq o n é
+else:                                                                      sempre menor/igual a 5, pq o nosso n é 1. Então,
+    instrução5                                                             temos que interromper o programa manualmente pq
+                                                                           assim, o programa não tem fim. tinhamos que usar
+                                                                           o break.
+                                                                           então é por isso que temos o n+=1, porque se
+                                                                           fizermos isto, o que vai acontecer é:
+                                                                           o nosso n, vai mudar constantemente de valor, pq
+                                                                           a cada resultado soma 1. primeiramente o nosso
+                                                                           resultado é 1, dps vai somar 1, vai ficar 2, dps
+                                                                           +1=3, +1=4, +1=5, +1=6 e aqui, vai introduzir a
+                                                                           nossa print ("fim do programa")
+se agora colocarmos aqui a instrução else
+else:
+ print("fim do ciclo while")           Vamos ter a mesma coisa: Quando chegasse ao numero 6, ia aparecer "fim do ciclo whyle").
+Mas e se fizermos isto:
+                n=1                           Então, se tivermos isto, a linha do "fim do cliclo", só é executada se acontecer aquela condição do n <= 5.
+                while n <=5:                         Como temos ali um if e um break, o que vai acontecer é: Quando o nosso n for 3 (  if n == 3   ), o 
+                   print(n)                          programa vai direto para a linha "Fim do programa" e não vai fazer a print do "fim do ciclo" pq como temos
+                   n+= 1                             ali um break, o nosso n nunca vai ser <= 5, vai parar no 3 e automaticamente vai para o "fim do programa"
+                   if n == 3:
+                      break                            
+                else:
+                   print("fim do ciclo")                   
+                print("fim do programa")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import random                              isto (random.randint) dá-me um numero aleatorio (random), entre os numeros 1 e 10.
+num = random.randint (1,10)                
+print(num)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LISTAS:
+idade = [10, 20, 30, 40]
+nome = [afonso, quim, joao, pedro]
+print(nome[0])-> isto vai mostrar o nome "afonso"
+se eu quiser mostrar 2 nomes por ex, é so fazer: print(nome[0:2])-> isto ja vai mostrar o nome "afonso e joao"
+se eu quiser mostrar, como ja vimos, só uma letra de qualquer palavra é-> print(nome[0][2]-> isto ja vai mostrar "o", a 3 letra da palavra afonso
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+for letra in "VITOR":
+print(letra)-> isto vai aparecer da seguinte forma: V
+                                                    I
+                                                    T
+                                                    O
+                                                    R
+nome = ["vitor", "ana", "joana"]
+for nome in nomes:
+    print(nome)-> isto vai aparecer da seguinte forma: vitor
+                                                       ana
+                                                       joana
+Se quiser separar os nomes, posso fazer algo com:
+nome = ["vitor", "ana", "joana"]
+for nome in nomes:
+    print(nome)
+    print("=" * 5)-> assim vai aparecer da seguinte forma: vitor
+                                                           ======
+                                                           ana
+                                                           ======
+                                                           joana
+                                                           ======
+print("fim do programa")-> o codigo está fora da identação(aquele espaço que há a separar o print do inicio da linha), ou seja, isto faz com que, depois de executar vitor, ana, joana, e os iguais a separar a linha,
+vai aparecer esta mensagem de "fim do programa", SE, este print, estivesse na mesma identação que as outras, ia aparecer isto: vitor
+                                                                                                                               ======
+                                                                                                                               fim do programa
+
+
+numeros = [1, 2, 3 , 4, 5, 6, 7, 8, 9, 10]
+ja sabem que se fizermos: print(numeros)-> isto vai aparecer os numeros separados individualmente, como estão aqueles nomes nas linhas anteriores. ex 1
+                                                                                                                                                      2
+                                                                                                                                                      3 etc
+Se quisermos ser mais praticos, podemos fazer isto:
+for pratico range[1,11]:
+print(pratico)-> isto vai executar esta função e faz com que apareça a nossa lista do 1 ate ao 10 e assim ja nao temos que fazer aquela lista em cima a dizer "numeros".
+Se quisermos, por exemplo, fazer com que apareça só numeros pares, podemos fazer isto:
+for pares range[1,20,2]-> este 2, chama se "STEP", e faz com que os numeros de 1 ate 20, apareçam de 2 em 2, ou seja, só os numeros pares.
+print(pares)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+matriz = [                              basicamente, uma matriz é uma lista DENTRO de outra lista.
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+print(matriz[0]) aparece: [1,2,3]
+print(matriz[0][1]) aparece: 2
+
+mas e se quisermos aceder a todos os elementos da lista? 1,2,3,4,5,6,7,8,9 sem  fazer isto: print(matriz[0][0] print(matriz[0][1]) print(matriz[0][2]) etc etc
+Temos que usar um for encadeado:
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+for l in range (3):                                                        Aqui, o primeiro for l in range(3) indica me as linhas de 0 ate 2, ou seja: [1,2,3] [4,5,6] [7,8,9] 
+    for c in range(3):                                                     Agora, eu quero fazer um for c in range(3) dentro do outro for, para me indicar que em cada linha (ou seja, no primeiro for), me diga o numero 
+	print(matriz[l][c])                                                de cada coluna. Agora que ja indiquei isto, tenho que fazer print e como fazemos esta print? print(matriz[l][c])
+
+Ainda ha outra forma de fazer isto tudo:
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+for linha in matriz:                                                       Aqui, temos o for linha in matriz, que faz com que a linha seja = [1,2,3], [4,5,6],[7,8,9] mas se fizermos um outro for dentro deste for, ou seja:
+    for num in linha:                                                                        for num in linha, faz com que este "num" aceda a cada um destes elementos destas linhas. 
+        print(num)                                                                                                                     e podemos ver isso com: print(num) e aparece: 1,2,3,4,5,6,7,8,9
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+listas(metodos)
+
+numeros = [1,3,5,4,9,7]
+numeros.append(9)                                        isto acrescenta à minha lista, o numero 9 no fim
+print(numeros)                                           ou seja, aparece: [1,3,5,4,9,7,9]
+
+numeros.insert(0,9)                                       isto acrescenta à minha lista,o numero 9 no sitio que eu indicar
+print(numeros)						 ou seja, posição 0 numero 9, aparece: [9,1,3,5,4,9,7]
+
+numeros.clear                                             isto limpa o conteudo da lista,
+print(numeros)                                            ou seja, aparece: [] (lista vazia)
+
+numeros.copy                                              isto copia o conteudo da nossa lista
+print(numeros)                                            ou seja: [1,3,5,4,9,7]
+n2 = numeros.copy                                         isto basicamente fica: [1,3,5,4,9,7]
+n2.append(8)                                              mas aqui usamos o append, ou seja, acrescentamos o 8 no final da lista
+print(numeros)                                            aqui mostra o antes: [1,3,5,4,9,7]
+print(n2)                                                 aqui mostra o depois: [1,3,5,4,9,7,8]
+Qualquer alteração que eu faça na lista n2, nao afeta a nossa lista de numeros, porque a variavel n2 é uma COPIA da nossa lista
+
+numeros.count                                            isto mostra-nos quantas vezes é que um determinado numero aparece na lista
+print numeros.count(5)                                   ou seja: vai aparecer na nossa consola: 1
+                                                         porque so temos 1x o numero 1 na nossa lista, se tivessemos 4x 1 na nossa
+                                                         lista, isto ia aparecer 4
+
+
+print(numeros.pop())                                      isto retira-nos o ultimo elemento da nossa lista, ou seja o 7
+                                                          Ou seja: aparece a lista mas sem o numero 7: [1,3,5,4,9]
+
+numeros.sort()                                            isto ordena-nos a lista por ordem ascendente
+print(numeros)                                            ou seja: [1, 3, 4, 5, 7,9]
+
+
+numeros.sort()
+numeros.reverse()                                         isto ordena-nos a lista por onde descendente, mas para isso temos que
+                                                          manter o sort, assim seja fica:
+print(numeros)                                            [9,7,5,4,3,1]
+
+numeros.index(5)                                          isto indica-nos em que posição se encontra o numero, neste caso o 5
+print(numeros.index(5)                                    ou seja, aparece: 2
+Se procurarmos um numero que nao existe na lista, ex:
+print(numeros.index(10) vai-nos dar um erro, é um erro de valor e diz que o 10 nao está na lista.
+O ideal, para fazermos esta procura, saber se um numero está na lista, o melhor é:
+encontrar = 8 in numeros                           esta variavael é do tipo boolean(true or false)
+print(encontrar)                                   Vai aparecer na consola: False
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TUPLAS:
+Basicamente as tuplas, sao como as listas MAS não podem ser mudadas, sao como se fossem "protegidas"
+ex:
+lista = [1,2,3]
+tupla = (1,2,3)
+lista[0] = 5               Aqui, estámos a mudar a posição 0 (numero 1) para o numero 5. fica: lista = [5,2,3]
+tupla[0] = 5               Aqui, estámos a fazer exatamente o mesmo, mas dá erro, porque o conteudo da tupla nao pode ser mudada
+
+Para além disso, nas tuplas não temos os mesmo metodos que na lista:
+nao existe o metodo numeros.append() (acrescenta numeros)
+                    numeros.pop()) (remove numeros)
+                    numeros.sort() (ordena numeros)
+                    etc etc
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dicionários:
+Os dicionários funcionam da seguinte forma:                                               Basicamente dá-mos um respetivo valor/nome ao que quisermos, literalmente como se fosse um dicionario.
+aluno = {                            
+    "nome" : "joana"                                                                                                     
+    "idade" : 17,
+    "inscrito" : True
+}
+Como se utiliza o dicionario? :
+print(aluno) mostra me: {nome: "joana", "idade": 17, "incrito": True}                       esta print mostra me o meu dicionario todo.
+print(aluno["nome"]) mostra me: joana
+print(aluno["idade"]) mostra me: 17
+tambem posso usar:
+print(aluno.get("nome")) mostra me: joana
+print(aluno.get("ano")) mostra me: none                                                     este comando: (aluno.get("ano")) serve para procurar alguma coisa no nosso dicionário
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Criar funções
+ 
+Vamos criar uma assinatura, e como é que fazemos isso?
+
+Começamos com a palavra "def"
+entao fazemos:
+def assinatura():
+	print("=" * 20)
+	print("Autor: Cláudio Cunha")
+	print("Versão: 2.1.0")
+	print("=" * 20)
+
+Agora como é que executamos a nossa função? Porque ela já está definida mas não vai ser executada, entao...
+é so fazer:
+assinatura()
+
+Agora e se quisermos mudar algo na nossa assinatura mas fora dela? por exemplo, mudar a versão e o nome:
+def assinatura(ver,autor):
+	print("=" * 20)
+	print("Autor: Cláudio Cunha", autor)
+	print("Versão: 2.1.0", ver)
+	print("=" * 20)
+
+about("2,2,4", "Cláudio Cunha e amigos")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Funções RETURN
+
+def cubo(num):								Para criar uma função é necessario escrever " def "
+	return num ** 3							para "devolver" a função é necessario escrever "return"
+
+
+numero = cubo(2)
+print(numero)
+
+isto vai aparecer: 8
+2x2x2
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TRY and EXCEPT
+
+age = int(input("how old are you? : "))			if the user writes "letters", the program doesnt except the answer (ValueError)
+	print("age")					and the program is interrupted. 
+	print("end")
+							We need to do this:
+try:
+	age = int(input("how old are you? : "))
+	print("age")
+	print("end")
+except ValueError:                                     We can write many excepts, like: except ValueError:          except ZeroDivisionError:
+	print("invalid age")								print("invalid age")		print("we can't divide a number 0")
+print(end)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Criar um modulo:
+basicamente um modulo é um "programa" que criamos, mas que podemos precisar dele, por ex:
+imaginem que queremos criar um conversor de moeda (eur_dol):
+def eur_dol(valor)
+	return valor * 1.22
+print(eur_dol(100)
+
+vai-nos aparecer: 82.0
+
+Agora temos a nossa função e o nosso modulo(programa) criado.
+
+e se precisarmos dele noutro programa?
+Podemos fazer:
+import nome do programa, ex:
+se o programa se chamar CONVERSOR:			
+import conversor					OU			from conversor import eur_dol
+print(conversor.eur_dol(100))							print(eur_dol(100))
+vai-nos aparecer: 82.2								vai-nos aparecer: 82.2
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CLASSES E OBJETOS:
+notas:
+Class-> Uma class pode ter várias funções dentro dela
+Metodos-> são as nossas funções dentro de class´s
+Objeto-> o objeto é um objeto do tipo da nossa Class. imaginemos que a Class tem o nome de: class Avatar:
+o objeto é do tipo Avatar.
+por ex:
+se a Class fosse : class Mamífero:
+podiamos criar vários objetos, por ex:
+cão = Mamífero
+gato = Mamífero
+self-> o self é o que faz referencia aos nossos objetos. por ex: cão // gato  , que são do tipo Mamífero(nossa class)
+Apesar de serem da mesma class, sao objetos diferentes. Podem ter coisas comuns e coisas que os distingam.
+
+
+Então vamos criar um ficheiro à parte e depois, num outro ficheiro, importa-la.
+
+o ficheiro vai ter o nome de "jogo.py"
+entao criamos o ficheiro e vamos criar uma CLASS
+como criamos a class?
+
+class Avatar:											Atenção, porque os nomes das Classes têm que começar por letra maiscula,se forem duas palavras, nao podem ser separadas por (___) 
+												Então, tinha que ser, por ex:  class NomeFaculdade
+
+
+
+Agora preciso de dizer quais são os metodos que esta class POSSUI. ou seja, o que é que eu consigo fazer com esta class, vamos supor que isto é um jogo e que vamos ter uma determinada personagem (avatar) e que eu consigo movimentar esta personagem.
+
+entao criámos um metodo, chamado:
+	
+Class Avatar:
+
+	def move_direita(self):
+		print("move direita..")
+	def move_esquerda(self):
+		print("move esquerda..")
+
+Agora, ja fizemos esta class, dps vamos completar um bocadinho mais.
+Passamos agora para a aplicação principal, da qual vamos importar a class que criamos!
+Vamos criar um ficheiro e dar o nome de app.py
+
+Agora vamos importar a class que criamos em cima.
+
+from jogo import Avatar:
+p1 = Avatar()											Aqui, estamos a dizer que o nosso p1 é do tipo AVATAR, ou seja pertence à nossa class.
+p1.move_direita()										Aqui, estamos a chamar o metodo (move_direita) que pertence à class Avatar
+
+
+p1.nome = ("joana")
+p2.nome = ("rita")
+Aqui estámos a definir ao p1 e ao p2 uma propriedade, o NOME. Podemos fazer varias propriedades
+p1.energia = 60
+p2.energia = 80
+
+
+Mas há uma forma mais correta e facil de fazer isto tudo, porque se quisessemos fazer 100 p1´s, isto seria gigante... então fazemos isto:
+
+Vamos para o nosso programa JOGO.PY (onde criamos a class)
+class Avatar:
+											Esta função normalmente é criada no inicio da class, chama-se "construtor", porque é esta função que ajuda a construir a class.
+	def __init__(self,nome, energia):						O nome dela nao pode ser escolhido por nós. para que o python saiba que esta é a função construtor, tem que ter este nome:def __init__(self)
+		self.nome = nome
+		self.energia = energia
+
+											
+	def move_direita(self):
+		print("move para a direita..")
+
+	def move_esquerda(self):
+		print("move para a esquerda..")
+
+self-> o self é o que faz referencia aos nossos objetos. neste caso: p1 e p2
+Quando colocamos ali em cima def __init__(self,nome, energia)
+		self.nome = nome
+		self.energia = energia
+Estamos a dizer que: o nosso self(p1).o nome que a personagem vai ter(nome) é o nome que nós indicarmos(= nome) -> p1.nome = nome
+		     o nosso self(p1).a energia que a personagem vai ter(energia) é o valor que nós indicarmos(= energia) -> p1.energia = energia
+
+ou seja, se formos ao outro programa, só precisamos de fazer:
+p1 = Avatar("joana",60)
+p2 = Avatar("rita", 80)
+""""""""""""""""""""""Este "joana" é enviada para dentro da variavel (nome) def __init__(self,JOANA, energia), esta variável nome recebe a palavra joana que vai ser guardada na propriedade nome(guardada) self.GUARDADA = JOANA e esta propriedade nome(JOANA) está guardada no nosso objeto (P1)
+Agora mudamos para o programa APP.PY
+Aquilo que eu quero é obrigar a que todas as personagens quando sao criadas tenham um determinado nome e uma determinada energia:
+p1 = Avatar("joana", 60)
+p2 = Avatar("rita", 80)
+							OU SEJA: Já nao precisamos de fazer: p1.nome = ("joana")     p1.energia = 60, porque mudamos a nossa class
+para vermos isto:
+
+print("nome: ", p1.nome)
+print(energia: ", p1.energia)
+
+aparece:
+Nome: Joana
+Energia: 60
+
+
+Agora vamos criar outra função na nossa class:
+	def __init__(self,nome, energia)
+		self.nome = nome
+		self.energia = energia
+
+											
+	def move_direita(self):
+		self.energia -= 5
+		print("move para a direita..")
+
+	def move_esquerda(self):
+		self.energia -= 5
+		print("move para a esquerda..")
+
+	def alimenta(self):
+		"""alimenta a personagem, aumentando a sua energia"""
+		self.energia += 5
+		print("alimentando...")
+
+
+este é um bom local para comentarmos, mas aqui é um comentario diferente pq aqui o comentario tem a ver com o que esta função faz.
+entao ao invés de fazermos #asdasdasdas, vamos fazer """asdasdasdasdasd""" porque podem ter várias linhas.
+
+from jogo import Avatar
+
+p1 = Avatar("joana", 60")
+p2 = Avatar("rita", 80")
+
+print("nome: ", p1.nome)
+print("energia: ", p1.energia)
+p1.move.esquerda()
+p1.move.direita()
+p1.move.esquerda()
+print("nome: ", p1.nome)
+print("energia: ", p1.energia)
+p1.alimenta()
+p1.alimenta()
+p1.alimenta()
+print("nome: ", p1.nome)
+print("energia: ", p1.energia)
+
+se executarmos isto tudo, então, vai ficar:
+nome: joana							nome: joana
+energia: 60							energia: 60
+move esquerda...						moveu-se para a esquerda, perdeu 5 de energia
+move direita...							moveu-se para a direita, perdeu 5 de energia
+move esquerda...						moveu-se para a esquerda, perdeu 5 de energia
+nome: joana							nome: joana
+energia: 45							energia: 45
+alimentando...							alimentou-se, ganhou 5 de energia
+alimentando...							alimentou-se, ganhou 5 de energia
+alimentando...							alimentou-se, ganhou 5 de energia
+nome: joana							nome: joana
+energia: 60							energia: 60
+
+
